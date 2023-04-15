@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row justify-content-center mt-4">
+    <button routerLink="/template" class="btn btn-warning">Ir a Template</button>
+  </div>
+  <div class="row justify-content-center mt-4">
+    <h1 class="text-center">Formularios Reactivos</h1>
+  </div>
+  <form [formGroup]="formAdd" (ngSubmit)="send()" class="row justify-content-center mt-3">
+    <div class="col-12 col-sm-12 col-md-6 col-lg-4">
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input formControlName="name" name="name" type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre">
+        <form-validator [control]="formAdd.controls['name']" name="Nombre"></form-validator>
+      </div>
+      <div class="mb-3">
+        <label for="apellido" class="form-label">Apellido</label>
+        <input formControlName="lastname" name="lastname" type="text" class="form-control" id="apellido" placeholder="Ingrese su apellido">
+        <form-validator [control]="formAdd.controls['lastname']" name="Apellido"></form-validator>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input formControlName="email" name="email" type="email" class="form-control" id="email" placeholder="Ingrese su email">
+        <form-validator [control]="formAdd.controls['email']" name="Email"></form-validator>
+      </div>
+      <div class="mb-3">
+        <label for="telefono" class="form-label">Teléfono</label>
+        <input formControlName="phone" type="tel" class="form-control" id="telefono" placeholder="Ingrese su teléfono">
+        <form-validator [control]="formAdd.controls['phone']" name="Teléfono"></form-validator>
+      </div>
+      <div class="mb-3">
+        <label for="telefono" class="form-label">Contraseña</label>
+        <input formControlName="password" type="password" class="form-control" id="password" placeholder="Ingrese su contraseña">
+        <form-validator [control]="formAdd.controls['password']" name="Contraseña"></form-validator>
+      </div>
+      <div class="mb-3">
+        <button class="btn btn-success" [disabled]="formAdd.invalid" type="submit">Enviar</button>
+      </div>
+    </div>
+  </form>
+</div>
