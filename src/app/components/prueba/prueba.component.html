@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <h1 class="text-center" [ngClass]="{'color-blue': isShow}">{{ prueba }}</h1>
+  </div>
+  <div *ngIf="isShow" class="row justify-content-center">
+    <h2 class="text-center">Como están todos?</h2>
+  </div>
+  <div class="row justify-content-center">
+    <div *ngFor="let item of arreglo" class="col-auto">
+      <div [ngSwitch]="item">
+        <div *ngSwitchCase="'Alan'">Alan Chagaray</div>
+        <div *ngSwitchCase="'Araceli'" [ngStyle]="{'color': item == 'Araceli' ? 'rgb(97, 252, 35)' : 'red'}">Araceli Scotty</div>
+        <div *ngSwitchDefault [ngClass]="{'color-blue': item == 'Gabriel'}">{{item}}</div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center mt-5">
+    <button class="btn btn-primary w-25" (click)="mutar()">Mutar</button>
+  </div>
+</div>
