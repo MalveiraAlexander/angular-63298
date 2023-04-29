@@ -1,0 +1,31 @@
+{
+  "users": [
+    {
+      "nombre": "Fabricio",
+      "apellido": "Gonzalez",
+      "email": "fabricio@edu.com",
+      "edad": 31,
+      "profesion": "Programador",
+      "hobbies": null,
+      "id": "VAdQXOH"
+    },
+    {
+      "nombre": "Miriam Soledad",
+      "apellido": "Figueroa",
+      "email": "mfigueroa@edu.com",
+      "edad": 33,
+      "profesion": "Técnica en Esterilización",
+      "hobbies": null,
+      "id": "pV1oGfs"
+    },
+    {
+      "nombre": null,
+      "apellido": null,
+      "email": null,
+      "edad": null,
+      "profesion": null,
+      "hobbies": null,
+      "id": "_OYKIos"
+    }
+  ]
+}
